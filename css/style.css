@@ -1,0 +1,310 @@
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+body {
+  margin: 0 auto;
+  max-width: 768px;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 300;
+  color: #FFFFFF;
+}
+
+
+.contact .flex-pair {
+  display: flex;
+  flex-direction: column;
+}
+
+input:focus,
+textarea:focus {
+    background-color: #E0FFFF;
+    border: 2px solid #0266C8;
+    transition: background 3s ease-in;
+}
+
+.textarea {
+    border: 4px solid #ddd;
+}
+
+.contact input {
+    height: 26px;
+    margin-bottom: 15px;
+}
+
+/*-----end Brian's suggestions----- */
+
+
+
+fieldset {
+  border: none;
+}
+
+.container {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    flex-grow: 0;
+}
+.row-1 {
+    display: flex;
+    flex-wrap: nowrap;
+    font-size: 1.2em;
+    text-align: center;
+    padding: 8px 50px;
+    margin: 12px;
+    align-self: center;
+    color: white;
+    background: #ff6600; 
+}
+
+.row-2 {
+    display: flex;
+    padding: 6px;
+    margin: auto;
+    color: black;
+    align-self: center;
+    font-size: 1.0em;
+ }
+
+.row-3 {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: gray;
+    font-size: .75em;
+    flex-wrap: wrap;
+    padding: 0 16px;
+    margin: 0 56px;
+}
+
+.section-border {
+    border: 1.5px solid #333;
+    margin-bottom: 1px;
+   }
+
+hr {
+    margin-top: 1px;
+    border: 1px solid #333;
+}
+
+form {
+  max-width: 300px;
+  margin: 10px auto;
+  padding: 10px 20px;
+  background: #f4f7f8;
+  border-radius: 8px;
+}
+
+input,
+select,
+textarea {
+  background-color: #f4f7f8;
+}
+
+
+label {
+  display: block;
+  font-size: 11px;
+  color: gray;
+  margin: 3px 0 3px;
+}
+
+.radio-buttons {
+    margin-bottom: 14px;
+}
+
+label.light {
+  font-weight: 300;
+  color: gray;
+  display: inline;
+}
+
+legend {
+  font-size: 1em;
+  color: black;
+  min-width: 100%;
+/*  padding-right: 4px auto;*/
+  padding-top: 18px;
+/*  padding-top: 26px;*/
+  margin-bottom: 10px;
+/*  border-top: 1px solid #333;*/
+}
+
+p {
+    color: gray;
+    font-size: 11px;
+}
+
+h3 {
+ display: flex;
+ color: gray;
+ font-size: 11px;
+ padding-bottom: 0;
+   }
+
+
+textarea {
+    height: 4em;
+    width: 140px;
+    margin-bottom: auto;
+}
+
+::placeholder {
+      font-size: 10px;
+      color: #ff6600;
+      font-style: italic;
+      text-align: right;
+}
+button {
+  padding: 12px 24px;
+  color: #FFF;
+  background-color: #ff6600;
+  font-size: 16px;
+  text-align: center;
+  font-style: normal;
+  border-radius: 5px;
+  width: 100%;
+  border: 1px solid lightgray;
+  border-width: 1px 1px 3px;
+  box-shadow: 0 -1px 0 rgba(255,255,255,0.1) inset;
+  margin-bottom: 10px;
+}
+
+.main-footer {
+    display: flex;
+    height: auto;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.copyright {
+    display: flex;
+    align-content: center;
+    color: lightslategray;
+    font-size: 9px;
+    font-style: italic; 
+    margin-top: 10px;
+    flex-wrap: nowrap;
+    font-size: .70em;
+    padding: 4px 56px;
+    margin: auto;
+    }    
+
+.contact input,
+.contact select,
+textarea {
+  width: 100%;
+}
+
+#other-topics::placeholder {
+    text-align: center;
+    padding-top: 1em;
+    font-size: 1.0em;
+    margin: 0 auto;
+}
+ 
+/* -----------Media Queries-------- */
+
+@media (min-width: 768px) {
+    .contact .flex-pair {
+        flex-direction: row;
+    }
+      
+    .contact input {
+        flex-grow: 1;
+        flex-basis: 75%;
+    }
+    
+    .contact label {
+        flex-basis: 25%;
+        height: 35px;
+        margin: auto 0;
+    }
+
+    #zipcode {                        
+        max-width: 25%;
+    }
+    
+    #state {
+        height: 25px; 
+        margin-left: 18px;
+    } 
+    
+    .container {
+        width: 100%;
+        justify-content: center;
+        margin: 10px auto;
+
+  }
+
+    .row-1 {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: center;
+        background-color: #ff6600;
+        width: 100%;
+        font-size: 1.4em;
+        margin: 10px;
+        padding: 16px;
+    }
+ 
+    .row-2 {
+        display: flex;
+        padding: 0;
+        margin: 0 auto;
+        color: black;
+        align-self: center;
+        font-size: 1.4em;
+ }
+    .row-3 {
+        display: flex;
+        align-items: center;
+    /*    flex-wrap: wrap;*/
+        text-align: center;
+        color: gray;
+        max-width: 68%;
+        font-size: 1em;
+        flex-wrap: wrap;
+        padding: 0;
+        margin: 0 auto;
+/*        border-bottom: 4px solid #333;*/
+        padding: 10px 0;
+}
+    
+    form {
+      max-width: 60%;
+      margin: 10px auto;
+      padding: 10px 56px;
+      background: #f4f7f8;
+      border-radius: 8px;
+}
+      form {
+      background-color: #fff;
+}  
+       input,
+       select,
+       textarea {
+       background-color: #f4f7f8;
+}
+    
+     
+    #other-topics::placeholder {
+    text-align: center;
+    padding-top: 1.4em;
+    font-size: 1.0em;
+    margin: 0 auto;
+}
+    .main-footer {
+        margin-bottom: auto;
+    }
+}
